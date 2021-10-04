@@ -1,4 +1,4 @@
-module.exports = async function (context, req) {
+module.exports = async function (context) {
     context.log('JavaScript HTTP trigger function processed a request.');
 
     const tasks = [
@@ -19,9 +19,7 @@ module.exports = async function (context, req) {
         }
     ];
 
-    const repArray = tasks;
-
     context.res = {
-        body: repArray
+        body: tasks
     };
 }
