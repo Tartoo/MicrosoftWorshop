@@ -18,12 +18,10 @@ module.exports = async function (context, req) {
             status: ""
         }
     ];
-    const responseMessage = tasks
-        ? "Hello, " + tasks + ". This HTTP triggered function executed successfully."
-        : "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.";
+
+    const repArray = tasks;
 
     context.res = {
-        // status: 200, /* Defaults to 200 */
-        body: responseMessage
+        body: repArray
     };
 }
